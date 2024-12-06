@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1>HTML code is stored as Document Object Model (DOM), and JS uses this DOM to access HTML</h1>
+    <div class="box">
+        <h3>Window Object</h3>
+        <p>The window object represents an open window in a browser.</p>
+        <p>This object is brower's object and is a global object, which is accessible by javascript.</p>
+        <img src="image.png">
+        <p>console.log, alert are properties of window object only</p>
+    </div>
+    <div class="box">
+        <h3>DOM</h3>
+        <p>Browser Creates a Document object model of HTML Page</p>
+        <img src="image copy.png">
+        <p>We can access it - window.document</p>
+        <img src="image copy 2.png">
+        <p>Note : we always link script.js before ending body tag in HTML, because if we do it in head tag, body part wont be accessible in the document object.
+        <br>
+        <br>
+        If script.js linked in head tag : console.dir(document.body) = null
+        </p>
+    </div>
+    <div class="box">
+        <h3>DOM Manipulation</h3>
+        <div>
+            <h4><i>How to access elements</i></h4>
+            <ul>
+                <li id="myID">Access using Id - document.getElementById(""); </li>
+                <li>Access using class - document.getElementsByClassName("");</li>
+                <li>Access using tag - document.getElemntsByTag("")</li>
+                <br>
+                <li>Query Selector -  document.querySelector(""); || document.querySelectorAll(""); 
+                    <ul>
+                        <li>Id => #myId</li>
+                        <li>Class => .myClass</li>
+                        <li>Tag => tagName</li>
+                    </ul>
+                </li>
+            </ul>
+            <p>
+                document.getElementById("") returns object
+                <br>
+                document.getElementsByClassName("") returns HTML Collection, which is like an array of objects.
+                <br>
+                document.querySelectorAll("") returns nodelist
+            </p>
+        </div>
+        <div>
+            <h4><i>Some Properties you want to remember</i></h4>
+            <ul>
+                <li>.tagName - return the tage name</li>
+                <li>.innerText - returns a string of the text content of node and its children</li>
+                <li>Navigation</li>
+                <ul>
+                    <li>.firstChild - return first child of the node</li>
+                    <li>.lastChild - return last child of the node</li>
+                    <li>.children - return array of all children</li>
+                </ul>
+                <li>.innerHTML - returns a string of HTML contents of the element</li>
+                <li>.textContent - return text of hidden elements also</li>
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
